@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>AURIS PRO X — Premium Wireless Headphones Console</title>
+    <meta name="description"
+        content="A premium LCARS-themed e-commerce landing page for the Auris Pro X wireless noise-cancelling headphones.">
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+    <section class="wrap-standard">
+        <!-- TOP UNIFIED CONTINUOUS BAR -->
+        <header class="top-bar-unified-continuous" role="banner">
+            <div class="bar-logo-area">
+                <span class="logo-text">AURIS</span>
+                <span class="logo-subtext">PRO X</span>
+            </div>
+            <div class="banner-embedded">
+                TACTICAL AUDIO TRANSMITTER UNIT &bull;
+            </div>
+            <div class="controls-embedded">
+                <button id="themeToggleBtn" class="console-btn btn-butterscotch"
+                    aria-label="Toggle Interface Theme">LIGHTS: OFF</button>
+                <button id="cartBtn" class="console-btn btn-gold" aria-label="View Cart Databank">CART [0]</button>
+            </div>
+        </header>
+
+        <!-- MAIN LAYOUT BODY -->
+        <div id="gap">
+            <!-- STATUS / TELEMETRY SECONDARY BAR -->
+            <div class="status-bar-unified-continuous">
+                <div class="status-logo-area">
+                    <span class="status-label">STATUS</span>
+                    <span class="status-value" id="system-status">NOMINAL</span>
+                </div>
+                <div class="status-banner-embedded" id="telemetry-banner">
+                    FREQUENCY CAPABILITY: 4-40k Hz &bull; POWER CORES: 30 HRS &bull; SHIFT SHIELD ACTIVE
+                </div>
+                <button id="menuToggleBtn" class="menu-toggle-btn" aria-label="Toggle Mobile Menu">☰</button>
+            </div>
+
+            <div class="main-body-content">
+                <!-- LEFT SIDEBAR -->
+                <nav class="left-frame" aria-label="Console Navigation">
+                    <button class="panel panel-overview" onclick="scrollToSection('overview')">01 &bull;
+                        OVERVIEW</button>
+                    <button class="panel panel-specs" onclick="scrollToSection('specs')">02 &bull; TELEMETRY</button>
+                    <button class="panel panel-reviews" onclick="scrollToSection('reviews')">03 &bull; COMMS
+                        LOG</button>
+                    <button class="panel panel-contact" onclick="scrollToSection('contact')">04 &bull; TRANSMIT</button>
+                    <div class="spacer"></div>
+                    <!-- DIAGNOSTIC READOUT -->
+                    <div class="diagnostic-readout" aria-live="polite">
+                        <div class="diag-line"><span class="lbl">QTY_BUF:</span> <span class="val"
+                                id="diag-qty">01</span></div>
+                        <div class="diag-line"><span class="lbl">SUBTOTAL:</span> <span class="val"
+                                id="diag-subtotal">$399.99</span></div>
+                        <div class="diag-line"><span class="lbl">TRANS_NET:</span> <span class="val">SECURE</span></div>
+                    </div>
+                </nav>
+
+                <!-- RIGHT CONTENT AREA -->
+                <main class="content-area">
+                    <!-- SECTION 1: OVERVIEW -->
+                    <section id="overview" class="content-section">
+                        <h2 class="section-title">01 &bull; PRIMARY SENSOR LOG &bull; OVERVIEW</h2>
+
+                        <div class="overview-grid">
+                            <!-- Visual Gallery -->
+                            <div class="gallery-wrapper">
+                                <div class="image-viewport">
+                                    <div class="coordinates">LAT 47.6062 / LON -122.3321</div>
+                                    <img src="./assets/pic3.webp" alt="Auris Pro X Headphone Profile" class="main-img"
+                                        id="mainImg">
+                                </div>
+                                <div class="thumbnails-sectors">
+                                    <button class="sector-btn active" data-src="./assets/pic3.webp"
+                                        data-sector="01">SECTOR 01</button>
+                                    <button class="sector-btn" data-src="./assets/pic2.webp" data-sector="02">SECTOR
+                                        02</button>
+                                    <button class="sector-btn" data-src="./assets/pic1.webp" data-sector="03">SECTOR
+                                        03</button>
+                                </div>
+                            </div>
+
+                            <!-- Product Info Controls -->
+                            <div class="product-info-panel">
+                                <div class="meta-tag">FLAGSHIP CLASS</div>
+                                <h3 class="product-title">AURIS PRO X</h3>
+                                <p class="product-subtitle">Premium Wireless Noise Cancelling Sensors</p>
+                                <div class="price-telemetry" id="productPrice">$399.99</div>
+
+                                <p class="product-description">
+                                    Engineered with dual noise cancelling processors and eight active sensing
+                                    microphones. The Auris Pro X delivers industry-leading ANC, an ultra-comfortable
+                                    fit, and high-fidelity Bluetooth audio for crystal-clear sound in any environment.
+                                </p>
+
+                                <div class="qty-control-panel">
+                                    <span class="qty-label">QUANTITY BUFFER:</span>
+                                    <div class="qty-controls">
+                                        <button class="qty-btn" id="qtyDown" aria-label="Decrease Quantity">-</button>
+                                        <span class="qty-num" id="qtyNum">1</span>
+                                        <button class="qty-btn" id="qtyUp" aria-label="Increase Quantity">+</button>
+                                    </div>
+                                </div>
+
+                                <button class="action-btn-tactical" id="addToCartBtn">
+                                    ENGAGE ADD TO CART
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECTION 2: SPECIFICATIONS -->
+                    <section id="specs" class="content-section">
+                        <h2 class="section-title">02 &bull; TELEMETRY READOUT &bull; METRICS &amp; SPECS</h2>
+
+                        <div class="specs-grid-wrapper">
+                            <!-- Metrics Cards -->
+                            <div class="metrics-dashboard">
+                                <div class="metric-card">
+                                    <div class="mc-label">BATTERY LIFE</div>
+                                    <div class="mc-val">30 HRS</div>
+                                    <div class="mc-sub">WITH ANC ACTIVE</div>
+                                </div>
+                                <div class="metric-card mc-blue">
+                                    <div class="mc-label">NOISE REDUCTION</div>
+                                    <div class="mc-val">ACTIVE</div>
+                                    <div class="mc-sub">INDUSTRY LEADING</div>
+                                </div>
+                                <div class="metric-card mc-gold">
+                                    <div class="mc-label">FREQUENCY RESPONSE</div>
+                                    <div class="mc-val">4-40k Hz</div>
+                                    <div class="mc-sub">HI-RES AUDIO</div>
+                                </div>
+                                <div class="metric-card mc-violet">
+                                    <div class="mc-label">QUICK CHARGE</div>
+                                    <div class="mc-val">3 MIN</div>
+                                    <div class="mc-sub">5 HRS PLAYBACK</div>
+                                </div>
+                            </div>
+
+                            <!-- Tech Specs Table -->
+                            <div class="tech-specs-console">
+                                <h3 class="subsection-title">TECHNICAL SPECIFICATIONS DIRECTORY</h3>
+                                <table class="specs-table">
+                                    <thead>
+                                        <tr>
+                                            <th>HARDWARE COMPONENT</th>
+                                            <th>SPECIFICATION DETAIL</th>
+                                            <th>DIAGNOSTIC STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Microphone Array</td>
+                                            <td>8 Miniature beamforming sensors</td>
+                                            <td><span class="status-indicator stat-green">OPTIMAL</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Driver Core</td>
+                                            <td>30mm Neodymium dome unit</td>
+                                            <td><span class="status-indicator stat-blue">HI-RES OK</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bluetooth Link</td>
+                                            <td>Multipoint v5.2 (Dual Sync)</td>
+                                            <td><span class="status-indicator stat-green">ACTIVE</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sound Engine</td>
+                                            <td>AI upscaling with DSP matrix</td>
+                                            <td><span class="status-indicator stat-green">NOMINAL</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Codec Support</td>
+                                            <td>SBC, AAC, LDAC audio protocol</td>
+                                            <td><span class="status-indicator stat-orange">READY</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECTION 3: REVIEWS -->
+                    <section id="reviews" class="content-section">
+                        <h2 class="section-title">03 &bull; COMMS TRANSMISSIONS &bull; CUSTOMER LOG</h2>
+
+                        <div class="reviews-grid">
+                            <!-- Review 1 -->
+                            <div class="review-log">
+                                <div class="log-header">
+                                    <span class="log-sender">SARAH J.</span>
+                                    <span class="log-stars">★★★★★</span>
+                                </div>
+                                <div class="log-channel">SECURE CHANNEL &bull; VERIFIED USER</div>
+                                <p class="log-body">
+                                    "The noise cancellation is unparalleled. Commuting through heavy city noise becomes
+                                    a quiet haven. Exceptional audio quality."
+                                </p>
+                            </div>
+
+                            <!-- Review 2 -->
+                            <div class="review-log rl-gold">
+                                <div class="log-header">
+                                    <span class="log-sender">DAVID M.</span>
+                                    <span class="log-stars">★★★★★</span>
+                                </div>
+                                <div class="log-channel">SECURE CHANNEL &bull; VERIFIED USER</div>
+                                <p class="log-body">
+                                    "Dual Multipoint works perfectly — linked to both my laptop and phone at once. Calls
+                                    are crystal clear even outdoors."
+                                </p>
+                            </div>
+
+                            <!-- Review 3 -->
+                            <div class="review-log rl-blue">
+                                <div class="log-header">
+                                    <span class="log-sender">ELENA R.</span>
+                                    <span class="log-stars">★★★★☆</span>
+                                </div>
+                                <div class="log-channel">SECURE CHANNEL &bull; VERIFIED USER</div>
+                                <p class="log-body">
+                                    "Lightweight and comfortable for long sessions. The ear pads fit snugly. Sound is
+                                    beautifully balanced. Highly recommended."
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECTION 4: NEWSLETTER / CONTACT -->
+                    <section id="contact" class="content-section">
+                        <h2 class="section-title">04 &bull; FREQUENCY LINK &bull; TRANSMIT LOGS</h2>
+
+                        <div class="contact-grid">
+                            <!-- Subscribe Form -->
+                            <div class="subscribe-console">
+                                <h3 class="subsection-title">SUBSCRIBE TO BROADCAST NETWORK</h3>
+                                <p class="sub-description">Establish a secure link to receive regular telemetry updates
+                                    and exclusive tactical offers.</p>
+
+                                <form id="newsletterForm" class="console-form">
+                                    <div class="form-input-group">
+                                        <input type="email" id="emailInput" placeholder="ENTER FREQUENCY EMAIL..."
+                                            required aria-label="Frequency Email">
+                                        <button type="submit" class="form-submit-btn">ENGAGE</button>
+                                    </div>
+                                </form>
+                                <p class="success-msg hidden" id="successMsg">✓ SECURE SUB-TRANSMISSION LINK REGISTERED!
+                                </p>
+                            </div>
+
+                            <!-- Contact Info -->
+                            <div class="coordinates-console">
+                                <h3 class="subsection-title">SECTOR HQ ARCHIVES</h3>
+                                <div class="coord-details">
+                                    <div class="detail-row"><span class="lbl">COORDS:</span> <span class="val">Auris
+                                            Audio, 1 Sound Street, London, UK</span></div>
+                                    <div class="detail-row"><span class="lbl">COMMS:</span> <span class="val"><a
+                                                href="mailto:support@auris-audio.com">support@auris-audio.com</a></span>
+                                    </div>
+                                </div>
+                                <div class="coord-actions">
+                                    <a href="#" class="coord-link btn-blue">WEBSITE PROTOCOL</a>
+                                    <a href="#" class="coord-link btn-gold">COMMUNITY BAND</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART SIDE DRAWER -->
+    <div class="cart-drawer" id="cartDrawer" role="dialog" aria-labelledby="cart-title" aria-modal="true">
+        <div class="cart-header">
+            <h3 id="cart-title">CART TELEMETRY</h3>
+            <button id="closeCart" aria-label="Close Cart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-msg">CART DATABANK IS EMPTY.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-row">
+                <span>SUBTOTAL</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-row">
+                <span>SHIPPING FEE</span>
+                <span class="free">FREE/NOMINAL</span>
+            </div>
+            <div class="cart-row total">
+                <span>TOTAL FREQ VALUE</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" disabled>INITIATE TRANSACTION PROTOCOLS</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- CHECKOUT ORDER MODAL -->
+    <div class="modal" id="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+        <div class="modal-box">
+            <div class="status-pulse-indicator">&#9673;</div>
+            <h2 id="modal-title">TRANSMITTING SECURE PAYMENTS...</h2>
+            <p class="modal-sub">Establishing Quantum Handshake with Central Financial Grid</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <button id="closeModal" class="modal-close-btn hidden">DISCONNECT FREQUENCY</button>
+        </div>
+    </div>
+
+    <script src="script.js?v=4" defer></script>
+</body>
+
+</html>
